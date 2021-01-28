@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column;
+}
+
+body > div {
+    margin: auto;
+}
+
+/* Css chung button  */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 12px 48px; /* tao do day button  */
+    border-radius: 50px;
+    cursor: pointer;
+    min-width: 150px; /* chieu dai toi thieu cua 1 button  */
+    transition: opacity 0.2s ease;
+}
+
+/* Khoang cach giua cac button  */
+.btn + .btn {
+    margin-left: 20px;
+}
+
+/* size button  */
+.btn--size-s {
+    padding: 10px 40px;
+}
+
+.btn--size-m {
+    padding: 14px 56px;
+}
+
+.btn--size-l {
+    padding: 16px 62px;
+}
+
+/* hieu ung  */
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* modified css  */
+.btn--success {
+    background-color: #71be34;
+}
+
+.btn--warning {
+    background-color: #ffb702;
+}
+
+.btn--danger {
+    background-color: #ff623d;
+}
+
+/* disabled */
+.btn--disabled {
+    opacity: 0.5 !important;
+    cursor: default;
+}

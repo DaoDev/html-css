@@ -1,0 +1,265 @@
+/* Khai bao bien css  */
+:root {
+    --primary-color: #ee4d2d;
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --boder-color: #dbdbdb;
+
+    --navbar-height: 34px;
+    --header-height: 120px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+}
+
+/* Khai bao thuoc tinh chung cho ca trang  */
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; /* tuong duong voi 10px*/
+    line-height: 1.6rem; /* chieu cao chu mac dinh */
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto; /* tu dong can giua trong cac khoi*/
+}
+
+/* Reponsive  */
+/* Truong hop khong dung width 1200px  */
+.grid__full-width {
+    width: 100%;
+}
+
+/* Nhung the nam trong the nay thi dan ngang ra  */
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+/* Test */
+.grid__column-2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.667%;
+}
+.grid__column-10 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.333%;
+}
+
+/* Animation  */
+@keyframes fadeIn {
+    form {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes growth {
+    form {
+        transform: scale(var(--growth-form));
+    }
+    to {
+        transform: scale(var(--growth-to));
+    }
+}
+
+/* Modal  */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    animation: fadeIn ease-in 0.5s;
+}
+
+.modal__overlay {
+    /* display: none; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal__body {
+    --growth-form: 0.7;
+    --growth-to: 1;
+    position: relative;
+    margin: auto;
+    z-index: 1;
+    animation: growth linear 0.1s;
+}
+
+/* Button style  */
+.btn {
+    min-width: 142px;
+    min-height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.4rem;
+    padding: 0 12px;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.6rem;
+}
+
+.btn.btn--normal:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.btn.btn--size-s {
+    height: 32px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 0 8px;
+}
+.btn.btn--primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.btn.btn--disabled {
+    color: #949494;
+    cursor: none;
+    background-color: #c3c3c3;
+}
+
+/* selection  */
+.select-input {
+    position: relative;
+    height: 34px;
+    min-width: 200px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.select-input__label {
+    font-size: 1.4rem;
+}
+
+.select-input__icon {
+    font-size: 1.4rem;
+    color: rgba(131, 131, 131);
+    position: relative;
+    top: 1px;
+}
+
+.select-input:hover .select-input__list {
+    display: block;
+}
+
+.select-input__list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25px;
+    padding-left: 0;
+    list-style: none;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    padding: 8px 16px;
+    min-width: 200px;
+    display: none;
+}
+
+.select-input__item {
+}
+
+.select-input__link {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+}
+
+.select-input__link:hover {
+    color: var(--primary-color);
+}
+
+/* Product Item  */
+.home-product-item {
+    background-color: var(--white-color);
+    margin-top: 10px;
+}
+
+/* Product img */
+.home-product-item__img {
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.home-product-item__name {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: 400;
+    color: var(--text-color);
+    margin: 10px;
+    height: 3.6rem;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+/* Price product */
+.home-product-item__price {
+}
+
+.home-product-item__price-old {
+}
+
+.home-product-item__price-current {
+}
+
+/* Action */
+.home-product-item__action {
+}
+
+.home-product-item__like {
+}
+
+/* Thong tin san pham */
+.home-product-item__origin {
+}
+
+.home-product-item__brand {
+}
+
+.home-product-item__brand-name {
+}
+
+/* Sale-off */
+.home-product-item__sale-off {
+}
+
+.home-product-item__percent {
+}
+
+.home-product-item__label {
+}
